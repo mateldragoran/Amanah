@@ -1,0 +1,108 @@
+/* src/styles/global.css */
+
+/* Apply dark emerald green background to body is handled by popup.css for the extension window itself */
+/* These styles are for components within the React app */
+
+body {
+  margin: 0; /* Ensure no default margin */
+  font-family: 'Inter', Arial, sans-serif; /* Default font consistent with popup.css */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Default text color for elements within the React app, if not overridden by component styles */
+* {
+  color: #F5F5F5; /* Default to off-white, can be overridden */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Take full width of the popup (375px as per popup.css) */
+  min-height: 500px; /* Minimum height of the extension popup */
+  max-height: 600px; /* Maximum height of the extension popup */
+  background-color: #00251a; /* Very dark emerald green, overall app background */
+  overflow: hidden; /* Prevents scrollbars on the container itself if content exceeds max-height */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto; /* Allow scrolling for content that exceeds the main area */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(0, 77, 64, 0.2); /* Emerald tinted glass */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  border: 1px solid rgba(0, 105, 92, 0.3); /* Emerald tinted border */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.glass-card-clear {
+  background: rgba(255, 255, 255, 0.1); /* Clearer glass */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Clearer border */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Basic button styling - can be expanded */
+.button-primary {
+  background-color: #00C853; /* Bright Emerald Green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #00BFA5; /* Slightly different emerald for hover */
+}
+
+/* Utility class for centering content if needed */
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Make sure parent has height or this might not work as expected */
+}
+
+/* General input styling - can be refined */
+input[type="text"],
+input[type="password"],
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  color: #F5F5F5;
+  margin-bottom: 10px;
+  width: calc(100% - 22px); /* Adjust width considering padding and border */
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(0, 192, 83, 0.7); /* Emerald accent on focus */
+  box-shadow: 0 0 0 2px rgba(0, 192, 83, 0.3);
+}
