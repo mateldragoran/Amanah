@@ -1,0 +1,28 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel popup/popup.html --dist-dir extension/dist",
+    "build": "parcel build popup/popup.html --dist-dir extension/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateldragoran/Amanah.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateldragoran/Amanah/issues"
+  },
+  "homepage": "https://github.com/mateldragoran/Amanah#readme",
+  "devDependencies": {
+    "parcel": "^2.15.2"
+  },
+  "dependencies": {
+    "zustand": "^5.0.5"
+  }
+}
