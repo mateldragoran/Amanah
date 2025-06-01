@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/mateldragoran/Amanah#readme",
   "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-react": "^7.27.1",
     "parcel": "^2.15.2"
   },
   "dependencies": {
